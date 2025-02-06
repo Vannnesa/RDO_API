@@ -1,0 +1,19 @@
+{
+  "elements": [
+    {
+      "name": "等级",
+      "selector": "p[class^='OverviewCard__contents__']",
+      "attribute": "textContent",
+      "regex": "\\d+"
+    },
+    {
+      "name": "经验详情",
+      "selector": "span[class^='RankCard__progress__'] > span",
+      "parts": [
+        { "index": 0, "regex": "[0-9,]+" },
+        { "index": 1, "regex": "[0-9,]+" }
+      ],
+      "separator": "/"
+    }
+  ]
+}
